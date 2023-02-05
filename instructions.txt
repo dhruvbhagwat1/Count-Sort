@@ -1,0 +1,15 @@
+To excecute the files on the login node, run the following commands.
+
+To run program serially,
+gcc -fopenmp -o 4 4.c
+OMP_NUM_THREADS=28 ./4
+
+To run program with the outer loop parallelised,
+gcc -D PARALLEL_LOOP_1 -fopenmp -o 4 4.c
+OMP_NUM_THREADS=28 ./4
+
+To run the program with the inner loop parallelised,
+gcc -D PARALLEL_LOOP_2 -fopenmp -o 4 4.c
+OMP_NUM_THREADS=28 ./4
+
+Input can be given in the form of integers, which are the number of elements in the input array.
